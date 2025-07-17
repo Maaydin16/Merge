@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://c45cq01p6fj33"]
+
+[ext_resource type="Script" uid="uid://bh1g1h4dpfojh" path="res://SpawnBox.gd" id="1_ti1p2"]
+
+[node name="SpawnBox" type="Control"]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+offset_right = 100.0
+grow_vertical = 0
+script = ExtResource("1_ti1p2")
+
+[node name="MonsterTexture" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.02
+anchor_bottom = 0.995
+offset_left = -2.0
+offset_top = 2.0
+offset_bottom = -1.52588e-05

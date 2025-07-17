@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcmw3ntmftnwk"]
+
+[ext_resource type="Script" uid="uid://bi630416fnq6b" path="res://mergeSlot.gd" id="1_on5sq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogp6i"]
+
+[node name="MergeSlot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_on5sq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_ogp6i")

@@ -1,0 +1,115 @@
+[gd_scene load_steps=9 format=3 uid="uid://dekvrkuqusu0w"]
+
+[ext_resource type="Script" uid="uid://blut206dtc2ud" path="res://main.gd" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://dcmw3ntmftnwk" path="res://mergeSlot.tscn" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://c45cq01p6fj33" path="res://SpawnBox.tscn" id="3_r0du0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uu6xs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fos0i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dxm6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgr22"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uu6xs")
+
+[node name="MergeArea" type="GridContainer" parent="."]
+modulate = Color(1, 0.992157, 1, 1)
+self_modulate = Color(0.396963, 0.99391, 0.868604, 1)
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 0
+offset_left = 185.0
+offset_top = 995.0
+offset_right = 698.0
+offset_bottom = 1255.0
+columns = 4
+
+[node name="MergeSlot" parent="MergeArea" instance=ExtResource("2_r0du0")]
+material = SubResource("CanvasItemMaterial_uu6xs")
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MergeSlot2" parent="MergeArea" instance=ExtResource("2_r0du0")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MergeSlot3" parent="MergeArea" instance=ExtResource("2_r0du0")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MergeSlot4" parent="MergeArea" instance=ExtResource("2_r0du0")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MergeSlot5" parent="MergeArea" instance=ExtResource("2_r0du0")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MergeSlot6" parent="MergeArea" instance=ExtResource("2_r0du0")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MergeSlot7" parent="MergeArea" instance=ExtResource("2_r0du0")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="MergeSlot8" parent="MergeArea" instance=ExtResource("2_r0du0")]
+clip_contents = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BattleArea" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 802.0
+offset_right = 700.0
+offset_bottom = 971.0
+
+[node name="Panel" type="Panel" parent="BattleArea"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_cm0pq")
+
+[node name="Panel2" type="Panel" parent="BattleArea"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_fos0i")
+
+[node name="Panel3" type="Panel" parent="BattleArea"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3dxm6")
+
+[node name="Panel4" type="Panel" parent="BattleArea"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_lgr22")
+
+[node name="SpawnBox" parent="." instance=ExtResource("3_r0du0")]
+layout_mode = 1
